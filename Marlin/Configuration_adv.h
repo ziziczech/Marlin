@@ -1643,8 +1643,8 @@
  */
 #if PROBE_SELECTED && !IS_KINEMATIC
   //#define PROBING_MARGIN_LEFT PROBING_MARGIN
-  //#define PROBING_MARGIN_RIGHT PROBING_MARGIN
-  #define PROBING_MARGIN_FRONT (PROBING_MARGIN + 10) //svorky na sklo
+  #define PROBING_MARGIN_RIGHT (PROBING_MARGIN - 10)  //vpravo více ke kraji
+  #define PROBING_MARGIN_FRONT (PROBING_MARGIN + 10) //vepředu místo na svorky na sklo
   //#define PROBING_MARGIN_BACK PROBING_MARGIN
 #endif
 
