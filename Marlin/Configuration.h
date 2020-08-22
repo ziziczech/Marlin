@@ -132,7 +132,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "v200820-1"
+#define CUSTOM_MACHINE_NAME "v200822-1"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -482,16 +482,16 @@
 #define PID_K1 0.95      // Smoothing factor within any PID loop
 
 #if ENABLED(PIDTEMP)
-  //#define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of PROGMEM)
-  //#define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
+  #define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of PROGMEM)
+  #define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
   //#define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 // Creality Ender-3
-  #define DEFAULT_Kp 21.55
-  #define DEFAULT_Ki 1.99
-  #define DEFAULT_Kd 58.29
+  #define DEFAULT_Kp 16.9
+  #define DEFAULT_Ki 1.23
+  #define DEFAULT_Kd 58.0
   
 #endif // PIDTEMP
 
@@ -541,9 +541,9 @@
   //#define DEFAULT_bedKd 1675.16
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
-  #define DEFAULT_bedKp 103.85
-  #define DEFAULT_bedKi 18.51
-  #define DEFAULT_bedKd 388.49
+  #define DEFAULT_bedKp 157.8
+  #define DEFAULT_bedKi 30.75
+  #define DEFAULT_bedKd 539.6
 #endif // PIDTEMPBED
 
 #if EITHER(PIDTEMP, PIDTEMPBED)
@@ -739,7 +739,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 401, 411 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 402, 411 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -975,7 +975,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { 38.2, 0, -0.79 }
+#define NOZZLE_TO_PROBE_OFFSET { 38.2, 0, -0.75 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
